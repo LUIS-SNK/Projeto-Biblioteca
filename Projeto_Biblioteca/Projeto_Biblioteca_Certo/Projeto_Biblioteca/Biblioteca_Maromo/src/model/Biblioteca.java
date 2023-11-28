@@ -1,0 +1,86 @@
+package model;
+
+import java.util.ArrayList;
+
+public class Biblioteca {
+    private ArrayList<Livro> listaLivros;
+    
+    private ArrayList<Autor> listaAutores;
+
+    public Biblioteca() {
+        this.listaLivros = new ArrayList<>();
+        this.listaAutores = new ArrayList<>();
+    }
+
+    public void adicionarLivro(Livro livro) {
+
+        if (listaLivros.size() > 0){
+
+            for (Livro l : listaLivros){
+
+                if (!l.getAutor().getNome().equals(livro.getAutor().getNome()) && !l.getTitulo().equals(livro.getTitulo())  && !l.getISBN().equals(livro.getISBN())){
+
+                    listaLivros.add(livro);
+                    livro.getAutor().adicionarLivro(livro);
+                    return;
+
+                }
+
+            }
+
+            System.out.println("model.Livro duplicado. Não foi possível adicionar à biblioteca.");
+
+        } else {
+
+            listaLivros.add(livro);
+            livro.getAutor().adicionarLivro(livro);
+
+        }
+
+    }
+    
+    public void adicionarAutor(Autor autor) {
+    	
+    	if (listaAutores.size() > 0) {
+    		
+    		for (Autor a : listaAutores) {
+    			
+    			if(!a.getNome().equals(autor.getNome()) && a.getIdade() != (autor.getIdade()) && !a.getEndereco().equals(autor.getEndereco()) && !a.getBiografia().equals(autor.getBiografia())) {
+    				
+    				listaAutores.add(autor);
+    				return;
+
+    				}
+    		}
+    		
+    		System.out.println("model.Autor duplicado. Não foi possível adicionar à biblioteca.");
+    		
+    	} else {
+    		
+    		listaAutores.add(autor);
+    		
+    	}
+    		
+    }
+
+    public void removerLivro(Livro livro) {
+        listaLivros.remove(livro);
+    }
+
+    public void listarLivros() {
+        for (Livro livro : listaLivros) {
+            System.out.println(livro.toString());
+        }
+    }
+    
+    public void listarAutor() {
+        for (Autor autor : listaAutores) {
+            System.out.println(autor.toString());
+        }
+    }
+
+    public ArrayList<Livro> getListaLivros() {
+        return listaLivros;
+    }
+}
+

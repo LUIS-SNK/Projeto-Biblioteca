@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="Biblioteca_Maromo/src"/>
+	<classpathentry kind="lib" path="Biblioteca_Maromo/lib/javafx.base.jar"/>
+	<classpathentry kind="lib" path="Biblioteca_Maromo/lib/javafx.controls.jar"/>
+	<classpathentry kind="lib" path="Biblioteca_Maromo/lib/javafx.fxml.jar"/>
+	<classpathentry kind="lib" path="Biblioteca_Maromo/lib/javafx.graphics.jar"/>
+	<classpathentry kind="lib" path="Biblioteca_Maromo/lib/javafx.media.jar"/>
+	<classpathentry kind="lib" path="Biblioteca_Maromo/lib/javafx.swing.jar"/>
+	<classpathentry kind="lib" path="Biblioteca_Maromo/lib/javafx.web.jar"/>
+	<classpathentry kind="lib" path="Biblioteca_Maromo/lib/javafx-swt.jar"/>
+	<classpathentry kind="output" path="out/production/Biblioteca"/>
+</classpath>
